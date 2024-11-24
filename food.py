@@ -1,7 +1,7 @@
 
 import pygame
 import random
-from constants import CELL_SIZE
+from constants import CELL_SIZE, FOOD_COLOR
 
 class Food:
     def __init__(self, _x=0, _y=0):
@@ -9,7 +9,7 @@ class Food:
         self.y = _y
 
     def render(self, screen): 
-        pygame.draw.rect(screen, "red", pygame.Rect(self.x, self.y, CELL_SIZE, CELL_SIZE))
+        pygame.draw.rect(screen, FOOD_COLOR, pygame.Rect(self.x, self.y, CELL_SIZE, CELL_SIZE))
 
     def respawn(self, screen, snake): 
         available = [] 

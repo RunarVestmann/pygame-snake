@@ -1,9 +1,10 @@
 import pygame
+from constants import SCREEN_HEIGHT, SCREEN_WIDTH
 from food import Food
 from snake import Snake
 
 def game_loop():
-    screen = pygame.display.set_mode((1280, 720))
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     clock = pygame.time.Clock()
 
     snake = Snake()

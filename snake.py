@@ -1,6 +1,6 @@
 
 import pygame
-from constants import CELL_SIZE
+from constants import CELL_SIZE, SNAKE_HEAD_COLOR, SNAKE_SEGMENT_COLOR
 
 class Snake:
     class SnakeSegment:
@@ -14,9 +14,9 @@ class Snake:
         self.segments = []
 
     def render(self, screen):
-        pygame.draw.rect(screen, "green", pygame.Rect(self.x, self.y, CELL_SIZE, CELL_SIZE))
+        pygame.draw.rect(screen, SNAKE_HEAD_COLOR, pygame.Rect(self.x, self.y, CELL_SIZE, CELL_SIZE))
         for segment in self.segments:
-            pygame.draw.rect(screen, (0, 127, 0), pygame.Rect(segment.x, segment.y, CELL_SIZE, CELL_SIZE))
+            pygame.draw.rect(screen, SNAKE_SEGMENT_COLOR, pygame.Rect(segment.x, segment.y, CELL_SIZE, CELL_SIZE))
 
     def grow(self): 
         self.segments.append(self.SnakeSegment())
