@@ -1,5 +1,5 @@
 import pygame
-from constants import SCREEN_HEIGHT, SCREEN_WIDTH
+from constants import FRAMES_PER_SECOND, SCREEN_HEIGHT, SCREEN_WIDTH
 from food import Food
 from snake import Snake
 
@@ -43,7 +43,7 @@ def game_loop():
         snake.render(screen)
 
         pygame.display.flip()
-        clock.tick(4)  
+        clock.tick(FRAMES_PER_SECOND)  
 
 def main():
     pygame.init()
