@@ -11,3 +11,8 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 python3 main.py
+
+## Screenshots / gifs
+
+https://github.com/user-attachments/assets/7c60b56b-5f60-4903-adfb-8937434964bf
+
